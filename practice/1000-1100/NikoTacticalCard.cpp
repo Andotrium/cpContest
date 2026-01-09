@@ -4,6 +4,19 @@
 #define ll long long
 using namespace std;
 
+/*
+Problem 1068(Div.2)-B Niko's Tactical Cards
+here at every step we have two options either red(k-a) or blue(b-k)
+here we can see that the max at every step is not necessarily the chosen to get the max at the next step
+ex: a=[1,0]; b=[2,0]
+max1 = 1-0
+but max2 = 0-(-2)
+so we can notice that to relate the present steps answer to the previous step we simply need to find
+the max between red and blue and for red -> k-a (maximize k from previous steps)
+blue -> b-k (minimize k from previous steps)
+so for O(n) solution, simply keep track of min, and max answer from previous steps
+*/
+
 ll ans(vector<ll>& first, vector<ll>& second, ll& size){
     vector<ll> maxScore(1,0);
     vector<ll> minScore(1,0);
