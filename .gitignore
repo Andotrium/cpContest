@@ -1,0 +1,15 @@
+# Binaries
+bin/
+
+# Object files
+*.o
+
+# macOS junk
+.DS_Store
+.dSYM/
+
+# VS Code
+.vscode/
+
+# Temp
+tempCodeRunnerFile.cpp
