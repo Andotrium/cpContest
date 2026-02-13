@@ -6,7 +6,6 @@
 using namespace std;
 
 // Macros
-#define print(a) for(auto x:a) cout << x << " "
 #define inc(a) sort(a.begin(),a.end())
 #define dec(a) sort(a.rbegin(),a.rend())
 #define all(a) a.begin(),a.end()

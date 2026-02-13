@@ -6,7 +6,6 @@
 using namespace std;
 
 // Macros
-#define print(a) for(auto x:a) cout << x << " "
 #define inc(a) sort(a.begin(),a.end())
 #define dec(a) sort(a.rbegin(),a.rend())
 #define all(a) a.begin(),a.end()
@@ -37,6 +36,23 @@ int main(){
     }
 }
 void kiki(){
+    ll n;
+    cin >> n;
+    vll a(n);
+    for(auto &x:a) cin >> x;
 
+    ll presentSum=a[0];
+    ll maxSum=presentSum;
+    for(int i=1;i<n;i++){
+        if(abs(a[i]%2)==abs(a[i-1]%2)){
+            presentSum = a[i];
+            maxSum = max(presentSum,maxSum);
+            continue;
+        }
+        presentSum += a[i];
+        presentSum = max(a[i],presentSum);
+        maxSum = max(presentSum,maxSum);  
+    }
+    cout << maxSum << endl;
 }
 

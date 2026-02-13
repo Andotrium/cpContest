@@ -6,7 +6,6 @@
 using namespace std;
 
 // Macros
-#define print(a) for(auto x:a) cout << x << " "
 #define inc(a) sort(a.begin(),a.end())
 #define dec(a) sort(a.rbegin(),a.rend())
 #define all(a) a.begin(),a.end()
@@ -37,6 +36,33 @@ int main(){
     }
 }
 void kiki(){
+    ll n;
+    cin >> n;
+    vll a(n);
+    for(auto &x:a) cin >> x;
+
+    vll factors;
+
+    for(int i=1;i*i<=n;i++){
+        if(n%i == 0) {factors.push_back(i);factors.push_back(n/i);}
+    }
+
+    vll pref(n+1,0);
+    for(int i=1;i<=n;i++){
+        pref[i] = pref[i-1]+a[i-1];
+    }
+    ll maxDiff = 0;
+    for(auto x:factors){
+        ll maxW=LLONG_MIN;
+        ll minW = LLONG_MAX;
+        for(int i=0;i+x<=n;i+=x){
+            ll w = pref[i+x]-pref[i];
+            maxW = max(maxW,w);
+            minW = min(minW,w);
+        }
+        maxDiff = max(maxDiff,maxW-minW);
+    }
+    cout << maxDiff << endl;
 
 }
 
