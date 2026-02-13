@@ -1,0 +1,39 @@
+Atcoder Beginner contest - https://atcoder.jp/contests/abc444/
+pretty bad performance as compared to what I wanted
+
+A:
+- super easy question
+- just had to check if all the digits of the number are equal to each other
+
+B: 
+- also super easy
+- just sum the digits
+- O(N) solution
+
+C:
+- this question seems easy and also figured out all the important stuff during the contest
+- a small observation that i>j must also be true costed me a lot of time
+learning:
+- deeply think through your solution
+- the thing that was going wrong is in the while loop just checking (i<j) and automatically assuming that all the pairs are being made
+- but on looking closely found out that in the case that i==j it'll make a pair with itself and in that case gives wrong answer
+- so while making loops think deeply about the edge cases
+
+D:
+-> nice question
+learning:
+-> see the constraints carefully
+
+E:
+- really good problem
+learning:
+- In a set while finding the position, it's nice to add an extremely big number and an extremely small number
+- This allows you to find the lower bound easily without caring about edge cases
+- also lower bound(x) is: smallest element greater than or equal to x
+- upper bound(x) is: smallest element strictly greater than x
+- also learnt how to solve variable sliding window problem without making it tooo complex
+
+F:
+- currently the problem is out of my scope
+- too hard to comprehend, will revisit later
+- but the basic idea in this problem is to do a binary search on answer

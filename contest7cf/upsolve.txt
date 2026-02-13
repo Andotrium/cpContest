@@ -1,0 +1,55 @@
+contest link - https://codeforces.com/contest/2193
+rating: +114, from 904 -> 1018
+
+A:
+-> pretty easy problem
+-> just see the difference between the sum of array and the target
+-> then see if the difference is a multiple of x
+-> if yes then print YES else NO
+
+B: 
+-> also a pretty easy problem
+-> we know that the lexicographically largest array will have n at the first position
+-> and if n is already at position 1, then n-1 should be at position 2
+-> the same algorithm follows
+
+C: 
+-> mainly question based on simple observation
+-> simply iterate through the array once, from the right end
+-> and keep changing the digits, based on the rules, to make them the largest
+-> the trick is to pre-compute the array, and not do it while serving the queries
+-> later just create a prefix sum
+-> and then easily service the queries
+
+D: 
+-> good question
+-> during the contest I could think of a solution and my approach was correct
+-> but made it too complex
+-> sorted the array in ascending and then had to keep track in a very unnatural way
+-> I could actually figure out most of the important things almost everything just fucked up in implementation
+learning:
+-> try to think of a simple way to do things
+-> take a minute to think what you actually are doing
+-> then think of a straight forward way to implement it
+-> many a times you get the correct idea, and you know it'll work, think of a simple implementation
+
+E:
+-> could not attempt during the contest
+learning:
+-> this is a simple dp question
+-> I should practice dp
+-> even if I hadn't practiced dp, this could be thought out
+
+F:
+-> could not attempt during the contest
+-> presently this dp implementation is too hard for me to implement
+-> there are too many minute things to take care of
+-> I have understood the dp approach thoroughly
+-> I could still make decent progress
+-> I need to practice dp for solving these problems
+-> I got the logic correct
+-> I implemented linear dp correctly but it gave runtime error
+-> this is because Bx-Ax is extremely large and can't allocate such large memory to array 
+learning:
+-> this is compressed dp problem
+-> if ranges like Bx-Ax are too large, then use compressed dp

@@ -1,0 +1,25 @@
+contest ABC441 (https://atcoder.jp/contests/abc441)
+
+A-> pretty easy just have to check for X and Y to be in range (P->100+P) and (Q->100+Q) respectively
+B-> also quite easy, count the number of occurrences in both langs and apply appropriate conditions
+
+C:
+-> This was a decent question
+-> the thing is we have to think of the worst case
+-> The worst case is when you chose N-K cups already and none of them contained sake
+-> to do this the sake has to be in the remiaing K cups
+-> and the worst case for this is when the sake is in the smallest K cups (because that'll make you choose more cups for completing X ml)
+-> now from the smallest k cups we'll start by choosing in the descending order of volume
+-> so simply : sort in descending, then after n-k cups start adding the volume and break when it's greater than X
+
+D:
+-> A simple graphs question
+-> do a bfs on the nodes and just keep track of length and contest
+-> kill the nodes with length greater than L
+learning:
+-> don't be scared of seeing new topics, think from first principles and try solving it
+
+E:
+-> couldn't solve during the contest
+-> took too long on question D
+learning:

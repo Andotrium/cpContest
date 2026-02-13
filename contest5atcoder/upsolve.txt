@@ -1,0 +1,37 @@
+ABC 440 
+A - super easy, just need to multiply the number by the power of 2 given
+B - also pretty easy, just need to sort the list in ascending order and give the first 3 positions
+
+C - 
+-> did a bruteforce approach first
+-> correctly identified that x must only go uptil 2w or so and after that the pattern will start repeating
+-> could not make the observation that we will actually need find the sum of consecutive w numbers always
+-> my bruteforce approach would TLE
+learning :
+-> learned a new technique how to group indexes based on their modulus with a specific number
+-> learned how to do sliding bucket on these group type questions
+-> always check the constraints, the bruteforce approach is o(W*N), whereas with this grouping approach it can be done in O(w+N);
+
+D - 
+-> very good and tricky problem
+-> started making it too complex during the contest
+-> couldn't figure out how I should efficiently reach the Yth integer without making a whole list of numbers that aren't in the list
+-> simulating the problem or even using maths tricks such as incrementing in chunks won't work
+learning:
+-> for extremely punishing test cases we'll use binary search on the answer, for these kind of problems
+-> complexity O((N+QlogY)logN)
+
+E-
+-> didn't get time to solve during contest
+learning: 
+-> this is a very good problem with a peculiar and a really difficult idea to understand
+-> the naive or brute force approach is to find all the possible combinations and then sort them decreasing
+-> but this approach quickly TLEs/MLEs
+-> use a max heap, to do best first search on the state of the array
+-> a good observation you have to make is that in a sorted(descending) array, the next best solution
+is found by only increasing the the adjacent type of cookies
+-> do this question again deeply
+
+F-
+-> did not get time to solve during contest
+
